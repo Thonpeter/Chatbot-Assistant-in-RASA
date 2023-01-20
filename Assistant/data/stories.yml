@@ -1,0 +1,55 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: courses path
+  steps:
+  - intent: courses
+  - action: utter_courses
+
+- story: my_name_is path
+  steps:
+  - intent: my_name_is
+  - action: utter_my_name_is
+
+- story: provide_requirements path
+  steps:
+  - intent: provide_requirements
+  - action: utter_provide_requirements
+
+- story: ask_placements path
+  steps:
+  - intent: ask_placements
+  - action: utter_ask_placements
+
+-story: university_location path
+steps:
+  -intent: university_location
+  -action: utter_university_location
